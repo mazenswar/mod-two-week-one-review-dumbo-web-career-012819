@@ -1,28 +1,36 @@
-<%= form_for @sea do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="container">
+  <%= form_for @sea do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name , class: 'form-control' %>
 
-  <%= f.label :temperature %>
-  <%= f.number_field :temperature %>
+    <%= f.label :temperature %>
+    <%= f.number_field :temperature , class: 'form-control'%>
 
-  <%= f.label :bio %>
-  <%= f.text_area :bio %>
+    <%= f.label :bio %>
+    <%= f.text_area :bio , class: 'form-control'%>
 
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url , class: 'form-control'%>
 
-  <%= f.label :mood %>
-  <%= f.text_field :mood %>
+    <%= f.label :mood %>
+    <%= f.text_field :mood , class: 'form-control'%>
 
-  <%= f.label :favorite_color %>
-  <%= f.text_field :favorite_color %>
+    <%= f.label :favorite_color %>
+    <%= f.text_field :favorite_color , class: 'form-control'%>
 
-  <%= f.label :scariest_creature %>
-  <%= f.text_field :scariest_creature %>
+    <%= f.label :scariest_creature %>
+    <%= f.text_field :scariest_creature , class: 'form-control'%>
 
-  <%= f.label :has_mermaids %>
-  <%= f.check_box :has_mermaids %>
+    <%= f.label :has_mermaids %>
+    <%= f.check_box :has_mermaids %>
 
-  <%=  f.submit %>
+    <%=  f.submit 'Update Sea' ,class: 'form-control btn btn-info' %>
 
+    <% end %>
+</div>
+
+
+  <%= form_for @sea do |f| %>
+    <%=  name: "_method", value: "delete" , class: 'form-control ' %>
+  <%=  f.submit 'Delete Sea' ,class: 'form-control btn btn-warning' %>
   <% end %>
